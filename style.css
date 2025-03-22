@@ -4,22 +4,23 @@
 :root {
     --rosa-claro: #FFB6C1;
     --dourado: #FFD700;
-    --branco: #FFFFFF;
+    --branco: #FFFFFF; /* Cor de fundo padrão do site */
     --verde-claro: #98FB98;
-    --texto-principal: #333;
+    --texto-principal: #333; /* Cor do texto principal */
 
     /* Cores do tema dark */
-    --dark-background: #121212;
-    --dark-text: #eee;
-    --dark-secondary: #333; /* Um cinza mais claro para elementos secundários */
+    --dark-background: #121212; /* Cor de fundo para o tema dark */
+    --dark-text: #eee; /* Cor do texto para o tema dark */
+    --dark-secondary: #333; /* Um cinza mais claro para elementos secundários no tema dark */
 }
 
+/* Estilos globais */
 body {
     font-family: 'Poppins', sans-serif; /* Fonte mais moderna */
     margin: 0;
     padding: 0;
-    background-color: var(--branco);
-    color: var(--texto-principal);
+    background-color: var(--branco); /* Cor de fundo padrão */
+    color: var(--texto-principal); /* Cor do texto padrão */
     line-height: 1.6; /* Melhora a legibilidade */
     overflow-x: hidden; /* Evita scroll horizontal indesejado */
     transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o tema dark */
@@ -27,42 +28,42 @@ body {
 
 /* Estilos para o tema dark */
 body.dark-mode {
-    background-color: var(--dark-background);
-    color: var(--dark-text);
+    background-color: var(--dark-background); /* Cor de fundo para o tema dark */
+    color: var(--dark-text); /* Cor do texto para o tema dark */
 }
 
 body.dark-mode .produto {
-    background-color: var(--dark-secondary);
+    background-color: var(--dark-secondary); /* Cor de fundo dos produtos no tema dark */
     border-color: #555; /* Cor da borda no tema dark */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra para destacar no tema dark */
 }
 
 body.dark-mode .produto p {
-    color: #ccc;
+    color: #ccc; /* Cor do texto da descrição dos produtos no tema dark */
 }
 
 body.dark-mode header {
-    background-color: #333;
+    background-color: #333; /* Cor de fundo do cabeçalho no tema dark */
 }
 
 body.dark-mode header h1 {
-  color: var(--dark-text);
+  color: var(--dark-text); /* Cor do título do cabeçalho no tema dark */
 }
 
 body.dark-mode #sobre {
-    background-color: #333;
+    background-color: #333; /* Cor de fundo da seção "Sobre" no tema dark */
 }
 
 body.dark-mode #contato input,
 body.dark-mode #contato textarea {
     background-color: #444; /* Cor de fundo dos inputs no tema dark */
-    color: var(--dark-text);
-    border-color: #555;
+    color: var(--dark-text); /* Cor do texto dos inputs no tema dark */
+    border-color: #555; /* Cor da borda dos inputs no tema dark */
 }
 
 body.dark-mode #contato input:focus,
 body.dark-mode #contato textarea:focus {
-  box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Sombra ao focar nos inputs no tema dark */
 }
 
 .container {
@@ -74,8 +75,8 @@ body.dark-mode #contato textarea:focus {
 
 /* Header */
 header {
-    background-color: var(--rosa-claro);
-    color: var(--branco);
+    background-color: var(--rosa-claro); /* Cor de fundo do cabeçalho */
+    color: var(--branco); /* Cor do texto do cabeçalho */
     padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sutil sombra */
     position: sticky; /* Fixa o cabeçalho no topo ao rolar */
@@ -113,7 +114,7 @@ header nav li {
 }
 
 header nav a {
-    color: var(--branco);
+    color: var(--branco); /* Cor dos links do cabeçalho */
     text-decoration: none;
     font-weight: 500; /* Semibold */
     transition: color 0.3s ease, transform 0.3s ease; /* Transição suave na cor e escala */
@@ -123,14 +124,14 @@ header nav a {
 }
 
 header nav a:hover {
-    color: var(--dourado);
+    color: var(--dourado); /* Muda a cor ao passar o mouse */
     transform: scale(1.1); /* Aumenta um pouco ao passar o mouse */
 }
 
 /* Banner */
 #banner {
-    background-color: var(--verde-claro);
-    color: var(--texto-principal);
+    background-color: var(--verde-claro); /* Cor de fundo do banner */
+    color: var(--texto-principal); /* Cor do texto do banner */
     text-align: center;
     padding: 80px 0;
     position: relative; /* Para posicionar elementos absolutamente dentro */
@@ -138,8 +139,8 @@ header nav a:hover {
 }
 
 body.dark-mode #banner {
-    background-color: var(--dark-secondary);
-    color: var(--dark-text);
+    background-color: var(--dark-secondary); /* Cor de fundo do banner no tema dark */
+    color: var(--dark-text); /* Cor do texto do banner no tema dark */
 }
 
 #banner::before {
@@ -176,8 +177,8 @@ body.dark-mode #banner {
 }
 
 .cta-button {
-    background-color: var(--dourado);
-    color: var(--branco);
+    background-color: var(--dourado); /* Cor de fundo do botão de chamada para ação */
+    color: var(--branco); /* Cor do texto do botão de chamada para ação */
     padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
@@ -198,18 +199,18 @@ body.dark-mode #banner {
 /* Produtos */
 #produtos {
     padding: 70px 0;
-    background-color: var(--branco);
+    background-color: var(--branco); /* Cor de fundo da seção de produtos */
 }
 
 body.dark-mode #produtos {
-  background-color: var(--dark-background);
+  background-color: var(--dark-background); /* Cor de fundo da seção de produtos no tema dark */
 }
 
 #produtos h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.5em;
-    color: var(--texto-principal);
+    color: var(--texto-principal); /* Cor do título da seção de produtos */
     text-transform: uppercase;
     letter-spacing: 2px;
     position: relative;
@@ -223,7 +224,7 @@ body.dark-mode #produtos {
     transform: translateX(-50%);
     width: 70px;
     height: 3px;
-    background-color: var(--dourado);
+    background-color: var(--dourado); /* Cor da linha abaixo do título da seção de produtos */
 }
 
 #produtos .container {
@@ -233,12 +234,12 @@ body.dark-mode #produtos {
 }
 
 .produto {
-    background-color: var(--branco);
+    background-color: var(--branco); /* Cor de fundo de cada produto */
     border: 1px solid #eee;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -257,16 +258,16 @@ body.dark-mode #produtos {
 .produto h3 {
     font-size: 1.4em;
     margin-bottom: 10px;
-    color: var(--texto-principal);
+    color: var(--texto-principal); /* Cor do título do produto */
 }
 
 body.dark-mode .produto h3 {
-  color: var(--dark-text);
+  color: var(--dark-text); /* Cor do título do produto no tema dark */
 }
 
 .produto p {
     font-size: 1em;
-    color: #777;
+    color: #777; /* Cor da descrição do produto */
     margin-bottom: 15px;
 }
 
@@ -275,12 +276,12 @@ body.dark-mode .produto h3 {
     font-size: 1.3em;
     font-weight: bold;
     margin-bottom: 15px;
-    color: var(--dourado);
+    color: var(--dourado); /* Cor do preço do produto */
 }
 
 .comprar-button {
-    background-color: var(--verde-claro);
-    color: var(--branco);
+    background-color: var(--verde-claro); /* Cor de fundo do botão de comprar */
+    color: var(--branco); /* Cor do texto do botão de comprar */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -294,15 +295,15 @@ body.dark-mode .produto h3 {
 
 /* Sobre */
 #sobre {
-    background-color: var(--rosa-claro);
-    color: var(--branco);
+    background-color: var(--rosa-claro); /* Cor de fundo da seção "Sobre" */
+    color: var(--branco); /* Cor do texto da seção "Sobre" */
     padding: 80px 0;
     text-align: center;
 }
 
 body.dark-mode #sobre {
-    background-color: var(--dark-secondary);
-    color: var(--dark-text);
+    background-color: var(--dark-secondary); /* Cor de fundo da seção "Sobre" no tema dark */
+    color: var(--dark-text); /* Cor do texto da seção "Sobre" no tema dark */
 }
 
 #sobre h2 {
@@ -323,18 +324,18 @@ body.dark-mode #sobre {
 /* Contato */
 #contato {
     padding: 70px 0;
-    background-color: var(--branco);
+    background-color: var(--branco); /* Cor de fundo da seção "Contato" */
 }
 
 body.dark-mode #contato {
-  background-color: var(--dark-background);
+  background-color: var(--dark-background); /* Cor de fundo da seção "Contato" no tema dark */
 }
 
 #contato h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.5em;
-    color: var(--texto-principal);
+    color: var(--texto-principal); /* Cor do título da seção "Contato" */
     text-transform: uppercase;
     letter-spacing: 2px;
     position: relative;
@@ -348,7 +349,7 @@ body.dark-mode #contato {
     transform: translateX(-50%);
     width: 70px;
     height: 3px;
-    background-color: var(--dourado);
+    background-color: var(--dourado); /* Cor da linha abaixo do título da seção "Contato" */
 }
 
 #contato form {
@@ -360,7 +361,7 @@ body.dark-mode #contato {
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
-    color: var(--texto-principal);
+    color: var(--texto-principal); /* Cor dos labels do formulário */
 }
 
 #contato input,
@@ -378,8 +379,8 @@ body.dark-mode #contato {
 #contato input:focus,
 #contato textarea:focus {
     outline: none;
-    border-color: var(--dourado);
-    box-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+    border-color: var(--dourado); /* Cor da borda ao focar nos inputs */
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.3); /* Sombra ao focar nos inputs */
 }
 
 #contato textarea {
@@ -388,8 +389,8 @@ body.dark-mode #contato {
 }
 
 #contato button {
-    background-color: var(--dourado);
-    color: var(--branco);
+    background-color: var(--dourado); /* Cor de fundo do botão de enviar */
+    color: var(--branco); /* Cor do texto do botão de enviar */
     padding: 12px 25px;
     border: none;
     border-radius: 5px;
@@ -400,22 +401,22 @@ body.dark-mode #contato {
 }
 
 #contato button:hover {
-    background-color: #e0b100;
+    background-color: #e0b100; /* Escurece um pouco ao passar o mouse */
     transform: translateY(-2px);
 }
 
 /* Footer */
 footer {
-    background-color: #222;
-    color: var(--branco);
+    background-color: #222; /* Cor de fundo do rodapé */
+    color: var(--branco); /* Cor do texto do rodapé */
     text-align: center;
     padding: 25px 0;
     font-size: 0.9em;
 }
 
 body.dark-mode footer {
-  background-color: #000;
-  color: var(--dark-text);
+  background-color: #000; /* Cor de fundo do rodapé no tema dark */
+  color: var(--dark-text); /* Cor do texto do rodapé no tema dark */
 }
 
 /* Animações */
@@ -489,4 +490,6 @@ body.dark-mode footer {
     #contato form {
         width: 95%;
     }
+
+    
 }

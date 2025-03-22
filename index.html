@@ -6,10 +6,8 @@
     <title>Bella Vita - Cosméticos Veganos e Naturais</title>
     <link rel="stylesheet" href="style.css">
 
-     <!-- Favicon -->
-  <link rel="icon" href="img/logoBV.png">
-  
-
+    <!-- Favicon -->
+    <link rel="icon" href="img/logoBV.png">
 </head>
 
 <body>
@@ -22,6 +20,12 @@
                     <li><a href="#produtos">Produtos</a></li>
                     <li><a href="#sobre">Sobre Nós</a></li>
                     <li><a href="#contato">Contato</a></li>
+                    <li>
+                        <!-- Botão para alternar o tema -->
+                        <button id="theme-toggle">
+                            <span id="theme-icon">🌙</span>
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -42,7 +46,7 @@
                 <img src="img/produto1.png" alt="Produto 1">
                 <h3>Kit Bella Vita: Revele sua Beleza Natural</h3>
                 <p>Rotina natural completa.</p>
-                <span class="preco">R$ 29,90</span>
+                <span class="preco">R$ 37,49</span>
                 <a href="#" class="comprar-button">Comprar</a>
             </div>
 
@@ -62,12 +66,20 @@
                 <a href="#" class="comprar-button">Comprar</a>
             </div>
 
+            <div class="produto">
+                <img src="img/produto4.jpg" alt="Produto 4">
+                <h3>Coleção Premium Verde</h3>
+                <p>Produtos exclusivos inspirados na natureza para um cuidado incomparável</p>
+                 <span class="preco">R$ 97,47</span>
+                <a href="#" class="comprar-button">Comprar</a>
+            </div>
+
         </div>
     </section>
 
     <section id="sobre">
         <div class="container">
-            <h2>Sobre a Bella Vita</h2>
+            <h2>Sobre a Bella Vita</h2> 
             <p>Somos uma empresa apaixonada por cosméticos veganos e naturais. Acreditamos que a beleza pode coexistir com a sustentabilidade e o respeito aos animais.  Nossos produtos são feitos com ingredientes cuidadosamente selecionados, livres de crueldade e com embalagens eco-friendly.</p>
         </div>
     </section>
@@ -75,6 +87,7 @@
     <section id="contato">
         <div class="container">
             <h2>Entre em Contato</h2>
+            
             <form>
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
@@ -92,9 +105,14 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Bella Vita Cosméticos Veganos e Naturais</p>
+            <p>© 2025 Bella Vita Cosméticos Veganos e Naturais</p>
+
+            <div id="notificacao" style="display: none;"></div>
         </div>
     </footer>
+
+
+<script src="script.js"> </script>
 
 </body>
 </html>

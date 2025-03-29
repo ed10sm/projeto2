@@ -1,118 +1,366 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bella Vita - Cosméticos Veganos e Naturais</title>
-    <link rel="stylesheet" href="style.css">
+<html class="wide wow-animation" lang="pt-br">
 
-    <!-- Favicon -->
-    <link rel="icon" href="img/logoBV.png">
+<head>
+    <title>Salão de Massagem</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Folhas de Estilo -->
+   <!-- BootStrap Icons -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Box Icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300i,400,400i,700%7CMontserrat:400,500,600,700%7CPlayfair+Display:400,700,700i%7COswald:400,700,700i">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilo básico para as seções (remova se já tiver no seu CSS) */
+
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* CSS para garantir a exibição dos ícones */
+        .icon-classic.novi-icon {
+            display: inline-block;
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
 </head>
 
 <body>
-
-    <header>
-        <div class="container">
-            <h1>Bella Vita</h1>
-            <nav>
-                <ul>
-                    <li><a href="#produtos">Produtos</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li>
-                        <!-- Botão para alternar o tema -->
-                        <button id="theme-toggle">
-                            <span id="theme-icon">🌙</span>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="banner">
-        <div class="container">
-            <h2>Cosméticos que cuidam de você e do planeta.</h2>
-            <p>Descubra a beleza natural com ingredientes Veganos e Naturais.</p>
-            <a href="#produtos" class="cta-button">Ver Produtos</a>
-        </div>
-    </section>
-
-    <section id="produtos">
-        <div class="container">
-            <h2>Nossos Produtos</h2>
-            <div class="produto">
-                <img src="img/produto1.png" alt="Produto 1">
-                <h3>Kit Bella Vita: Revele sua Beleza Natural</h3>
-                <p>Rotina natural completa.</p>
-                <span class="preco">R$ 37,49</span>
-                <a href="#" class="comprar-button">Comprar</a>
+    <div class="preloader">
+        <div class="preloader-body">
+            <div class="cssload-container">
+                <div class="cssload-speeding-wheel"></div>
             </div>
-
-            <div class="produto">
-                <img src="img/produto2.jpg" alt="Produto 2">
-                <h3>Frescor da Natureza</h3>
-                <p>Pele fresca e radiante</p>
-                <span class="preco">R$ 39,90</span>
-                <a href="#" class="comprar-button">Comprar</a>
+            <p>Carregando...</p>
+        </div>
+    </div>
+    <div class="page">
+        <!-- Cabeçalho da Página -->
+        <header class="section page-header">
+            <!-- RD Navbar -->
+            <div class="rd-navbar-wrap">
+                <nav class="rd-navbar rd-navbar-classic rd-navbar-classic-center" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+                    <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+                    <div class="rd-navbar-aside-outer rd-navbar-collapse novi-bg novi-bg-img">
+                        <div class="rd-navbar-aside">
+                            <div class="header-info">
+                                <ul class="list-inline list-inline-md">
+                                    <li>
+                                        <div class="unit unit-spacing-xs align-items-center">
+                                            <div class="unit-left fw-bold">Ligação Gratuita:</div>
+                                            <div class="unit-body"><a href="tel:#">(073) 123-12-12</a></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="unit unit-spacing-xs align-items-center">
+                                            <div class="unit-left fw-bold">Horário de Funcionamento:</div>
+                                            <div class="unit-body">Seg-Sex: 10h - 20h</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="social-block">
+                                <ul class="list-inline">
+                                    <li><a class="icon novi-icon fa-facebook" href="#"></a></li>
+                                    <li><a class="icon novi-icon fa-twitter" href="#"></a></li>
+                                    <li><a class="icon novi-icon fa-google-plus" href="#"></a></li>
+                                    <li><a class="icon novi-icon fa-vimeo" href="#"></a></li>
+                                    <li><a class="icon novi-icon fa-youtube" href="#"></a></li>
+                                    <li><a class="icon novi-icon fa-pinterest-p" href="#"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rd-navbar-main-outer">
+                        <div class="rd-navbar-main">
+                            <!-- RD Navbar Panel -->
+                            <div class="rd-navbar-panel">
+                                <!-- RD Navbar Toggle -->
+                                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                                <!-- RD Navbar Brand -->
+                                <div class="rd-navbar-brand"><a href="index.html"><img src="images/logo-dark-2-158x58.png" alt="" width="158" height="58" /></a></div>
+                            </div>
+                            <div class="rd-navbar-main-element">
+                                <div class="rd-navbar-nav-wrap">
+                                    <ul class="rd-navbar-nav">
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#inicio">Início</a></li>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#sobre-nos">Sobre Nós</a></li>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#servicos">Serviços</a></li>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#contato">Contato</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
             </div>
+        </header>
 
-            <div class="produto">
-                <img src="img/produto3.jpg" alt="Produto 3">
-                <h3>Coleção Botânica</h3>
-                <p>Natureza em cada toque</p>
-                 <span class="preco">R$ 49,90</span>
-                <a href="#" class="comprar-button">Comprar</a>
+        <!-- Swiper -->
+        <section id="inicio" class="section swiper-container swiper-slider swiper-slider-1 slider-pagination-vertical" data-swiper='{"autoplay":{"delay":5500},"effect":"fade","simulateTouch":false,"loop":false}'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-filter-overlay" data-slide-bg="img/slide-3-3-1920x720.jpg">
+                    <div class="swiper-slide-caption section-md">
+                        <div class="container text-center">
+                            <div class="row row-novi justify-content-center">
+                                <div class="col-sm-10 col-lg-8 col-xl-7 swiper-caption-inner">
+                                    <h1 class="heading-decorate" data-caption-animate="fadeInUp" data-caption-delay="100"><span class="text-primary">Solari </span> Salão de Massagem Relaxamento Excepcional</h1>
+                                    <div class="divider-lg" data-caption-animate="fadeInLeft" data-caption-delay="550"></div>
+                                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Bem-vindo ao Solari, lar dos talentos mais apaixonados da região. Convidamos você a explorar nossos excepcionais serviços de massagem.</p><a class="button button-white" href="#" data-caption-animate="fadeInUp" data-caption-delay="450">Agende Agora</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-filter-overlay" data-slide-bg="img/slide-3-2-1920x720.jpg">
+                    <div class="swiper-slide-caption section-md">
+                        <div class="container text-center">
+                            <div class="row row-novi justify-content-center">
+                                <div class="col-sm-10 col-lg-8 swiper-caption-inner">
+                                    <h1 class="heading-decorate" data-caption-animate="fadeInUp" data-caption-delay="100">Qualidade Absoluta de <span class="text-primary">Serviço</span><br class="d-none d-lg-inline"> para Cada Cliente</h1>
+                                    <div class="divider-lg" data-caption-animate="fadeInLeft" data-caption-delay="550"></div>
+                                    <p class="lead block-sm" data-caption-animate="fadeInUp" data-caption-delay="250">Nosso Salão de Massagem melhora constantemente os padrões de atendimento ao cliente e oferece os melhores tratamentos de massagem para cada cliente.</p><a class="button button-white" href="#" data-caption-animate="fadeInUp" data-caption-delay="450">Agende Agora</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-filter-overlay" data-slide-bg="img/slide-3-1-1920x720.jpg">
+                    <div class="swiper-slide-caption section-md">
+                        <div class="container text-center">
+                            <div class="row row-novi justify-content-center">
+                                <div class="col-sm-10 col-lg-8 col-xl-7 swiper-caption-inner">
+                                    <h1 class="heading-decorate" data-caption-animate="fadeInUp" data-caption-delay="100">Onde o <span class="text-primary">Relaxamento</span><br>Encontra a Beleza</h1>
+                                    <div class="divider-lg" data-caption-animate="fadeInLeft" data-caption-delay="550"></div>
+                                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">No Solari, nosso objetivo é criar uma atmosfera de máximo relaxamento para todos os clientes, tanto novos quanto regulares.</p><a class="button button-white" href="#" data-caption-animate="fadeInUp" data-caption-delay="450">Agende Agora</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- Swiper Pagination -->
+            <div class="swiper-pagination"></div>
+        </section>
 
-            <div class="produto">
-                <img src="img/produto4.jpg" alt="Produto 4">
-                <h3>Coleção Premium Verde</h3>
-                <p>Produtos exclusivos inspirados na natureza para um cuidado incomparável</p>
-                 <span class="preco">R$ 97,47</span>
-                <a href="#" class="comprar-button">Comprar</a>
+        <section id="sobre-nos" class="section section-lg bg-default novi-bg novi-bg-img">
+            <div class="container-fluid">
+                <div class="row row-novi row-50 align-items-lg-center justify-content-xl-between">
+                    <div class="col-md-6">
+                        <div class="block-lg"><img src="img/home-3-1-720x480.jpg" alt="" width="720" height="480" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row row-novi justify-content-center">
+                            <div class="col-sm-10 col-md-12">
+                                <div class="block-xs">
+                                    <h2 class="heading-decorate">Por que os Clientes <br><span class="divider"></span>Nos Escolhem</h2>
+                                    <p class="big text-gray-800">Nosso Salão de Massagem é um lugar ideal para se presentear, relaxar após um dia de trabalho agitado e obter um tratamento corporal exclusivo.</p>
+                                    <p>Oferecemos uma variedade de serviços de massagem para escolher. Em vez de oferecer apenas um tipo de massagem, como muitos salões fazem, aprimoramos cada tipo de massagem que podemos oferecer a você.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-        </div>
-    </section>
+        <section id="servicos" class="section bg-gray-11 novi-bg novi-bg-img">
+            <div class="row row-novi justify-content-center justify-content-lg-start g-0">
+                <div class="col-sm-12 col-lg-8 col-xl-7 col-xxl-6">
+                    <div class="row g-0 box-icon-classic-bordered justify-content-center">
+                        <div class="col-sm-10 col-md-6">
+                            <div class="box-icon-classic box-icon-classic-vertical">
+                                <div class="icon-classic-aside">
+                                    <div class="icon-classic novi-icon icomoon-icon-01"></div>
+                                    <h4 class="icon-classic-title">Massagem Sueca</h4>
+                                </div>
+                                <div class="bi bi-body">
+                                    <p>A massagem sueca é perfeita para começar sua introdução ao mundo do relaxamento.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-10 col-md-6">
+                            <div class="box-icon-classic box-icon-classic-vertical">
+                                <div class="icon-classic-aside">
+                                    <div class="icon-classic novi-icon icomoon-icon-02"></div>
+                                    <h4 class="icon-classic-title">Massagem Terapêutica</h4>
+                                </div>
+                                <div class="icon-classic-body">
+                                    <p>A massagem terapêutica ajuda você a manter seu corpo em boas condições e aumentar a flexibilidade muscular.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-10 col-md-6">
+                            <div class="box-icon-classic box-icon-classic-vertical">
+                                <div class="icon-classic-aside">
+                                    <div class="icon-classic novi-icon icomoon-icon-04"></div>
+                                    <h4 class="icon-classic-title">Massagem com Pedras Quentes</h4>
+                                </div>
+                                <div class="icon-classic-body">
+                                    <p>Este tipo de massagem oferece muitos benefícios à saúde e ajuda você a aliviar músculos tensos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-10 col-md-6">
+                            <div class="box-icon-classic box-icon-classic-vertical">
+                                <div class="icon-classic-aside">
+                                    <div class="icon-classic novi-icon icomoon-icon-05"></div>
+                                    <h4 class="icon-classic-title">Tratamentos Corporais</h4>
+                                </div>
+                                <div class="icon-classic-body">
+                                    <p>Também oferecemos uma variedade de tratamentos corporais, incluindo envoltório anticelulite, terapia de esfoliação, depilação e muito mais.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-5 col-xxl-6 d-flex">
+                    <div class="block-img-aside novi-bg novi-bg-img"></div>
+                </div>
+            </div>
+        </section>
 
-    <section id="sobre">
-        <div class="container">
-            <h2>Sobre a Bella Vita</h2> 
-            <p>Somos uma empresa apaixonada por cosméticos veganos e naturais. Acreditamos que a beleza pode coexistir com a sustentabilidade e o respeito aos animais.  Nossos produtos são feitos com ingredientes cuidadosamente selecionados, livres de crueldade e com embalagens eco-friendly.</p>
-        </div>
-    </section>
-
-    <section id="contato">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            
-            <form>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2025 Bella Vita Cosméticos Veganos e Naturais</p>
-
-            <div id="notificacao" style="display: none;"></div>
-        </div>
-    </footer>
-
-
-<script src="script.js"> </script>
-
+        <section id="contato" class="section section-md bg-default novi-bg novi-bg-img text-center">
+            <div class="container">
+                <div class="formulario-centralizado">
+                    <h2>Entre em Contato</h2>
+                    <div class="divider-lg"></div>
+                    <p>Tem alguma pergunta? Sinta-se à vontade para usar o formulário de contato abaixo para entrar em contato conosco. Responderemos o mais breve possível!</p>
+                    <form class="rd-form rd-mailform rd-form-icon" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                        <div class="form-wrap">
+                            <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
+                            <label class="form-label" for="contact-name">Seu Nome</label><span class="icon novi-icon mercury-icon-user input-icon"></span>
+                        </div>
+                        <div class="form-wrap">
+                            <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
+                            <label class="form-label" for="contact-email">Seu Email</label><span class="icon novi-icon mercury-icon-e-mail input-icon"></span>
+                        </div>
+                        <div class="form-wrap">
+                            <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@Numeric">
+                            <label class="form-label" for="contact-phone">Seu Telefone</label><span class="icon novi-icon mercury-icon-phone input-icon"></span>
+                        </div>
+                        <div class="form-wrap textarea-wrap">
+                            <label class="form-label" for="contact-message">Sua Mensagem</label>
+                            <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea><span class="icon mercury-icon-pencil input-icon"></span>
+                        </div>
+                        <div class="button-block">
+                            <button class="button button-primary" type="submit">Enviar Mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer class="section bg-default novi-bg novi-bg-img section-sm footer-modern">
+            <div class="container">
+                <div class="row row-50">
+                    <div class="col-sm-6 col-lg-3 footer-post-wrap">
+                        <p class="footer-title">Sobre Nós</p>
+                        <div class="divider-lg"></div>
+                        <p>O Solari Massage Salon oferece uma extensa gama de serviços de massagem e tratamentos corporais desde 1999.</p>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <p class="footer-title">Postagens Recentes</p>
+                        <div class="divider-lg"></div>
+                        <div class="footer-post">
+                            <h5><a href="blog-post.html">5 Principais Razões para Visitar o Salão de Massagem Mais Próximo</a></h5>
+                            <ul class="list-inline">
+                                <li>Junho 10, 2021</li>
+                                <li>3 Comentários</li>
+                            </ul>
+                        </div>
+                        <div class="footer-post">
+                            <h5><a href="blog-post.html">Um Dia na Vida de um Massoterapeuta</a></h5>
+                            <ul class="list-inline">
+                                <li>Junho 12, 2021</li>
+                                <li>3 Comentários</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <p class="footer-title">Horário de Funcionamento</p>
+                        <div class="divider-lg"></div>
+                        <ul class="list">
+                            <li>Seg-Sex: 9h – 18h</li>
+                            <li>Sábado: 9h – 16h</li>
+                            <li>Domingo: Fechado</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <p class="footer-title">Informações de Contato</p>
+                        <div class="divider-lg"></div>
+                        <ul class="footer-contact-info">
+                            <li><span class="icon novi-icon mdi mdi-map-marker icon-primary"></span><a href="#">Washington, EUA 6036 Richmond hwy., Alexandria, VA, 2230</a></li>
+                            <li><span class="icon novi-icon mdi mdi-phone icon-primary"></span><a href="tel:#">+1 (409) 987–5874</a></li>
+                            <li><span class="icon novi-icon mdi mdi-email-outline icon-primary"></span><a href="mailto:#">info@demolink.org</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <section class="section bg-gray-100 novi-bg novi-bg-img section-xxs text-center">
+            <div class="container">
+                <div class="row row-30 align-items-lg-center">
+                    <div class="col-lg-6 text-lg-center">
+                        <p class="rights"><span>© </span><span class="copyright-year"></span><span> </span><span>Todos os Direitos Reservados</span><span> </span><a href="privacy-policy.html">Política de Privacidade</a></p>
+                    </div>
+                    <div class="col-lg-3 text-lg-end">
+                        <div class="social-block-footer">
+                            <ul class="list-inline">
+                                <li><a class="icon novi-icon fa-facebook" href="#"></a></li>
+                                <li><a class="icon novi-icon fa-twitter" href="#"></a></li>
+                                <li><a class="icon novi-icon fa-google-plus" href="#"></a></li>
+                                <li><a class="icon novi-icon fa-vimeo" href="#"></a></li>
+                                <li><a class="icon novi-icon fa-youtube" href="#"></a></li>
+                                <li><a class="icon novi-icon fa-pinterest-p" href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- coded by barber-->
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P9FT69');
+    </script>
+    <!-- End Google Tag Manager -->
 </body>
+
 </html>

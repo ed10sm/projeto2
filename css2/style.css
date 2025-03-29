@@ -1,0 +1,495 @@
+/* Paleta de Cores: #FFB6C1 (Rosa Claro), #FFD700 (Dourado), #FFFFFF (Branco), #98FB98 (Verde Claro) */
+
+/* Variáveis para reutilização de cores */
+:root {
+    --rosa-claro: #FFB6C1;
+    --dourado: #FFD700;
+    --branco: #FFFFFF; /* Cor de fundo padrão do site */
+    --verde-claro: #98FB98;
+    --texto-principal: #333; /* Cor do texto principal */
+
+    /* Cores do tema dark */
+    --dark-background: #121212; /* Cor de fundo para o tema dark */
+    --dark-text: #eee; /* Cor do texto para o tema dark */
+    --dark-secondary: #333; /* Um cinza mais claro para elementos secundários no tema dark */
+}
+
+/* Estilos globais */
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte mais moderna */
+    margin: 0;
+    padding: 0;
+    background-color: var(--branco); /* Cor de fundo padrão */
+    color: var(--texto-principal); /* Cor do texto padrão */
+    line-height: 1.6; /* Melhora a legibilidade */
+    overflow-x: hidden; /* Evita scroll horizontal indesejado */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o tema dark */
+}
+
+/* Estilos para o tema dark */
+body.dark-mode {
+    background-color: var(--dark-background); /* Cor de fundo para o tema dark */
+    color: var(--dark-text); /* Cor do texto para o tema dark */
+}
+
+body.dark-mode .produto {
+    background-color: var(--dark-secondary); /* Cor de fundo dos produtos no tema dark */
+    border-color: #555; /* Cor da borda no tema dark */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra para destacar no tema dark */
+}
+
+body.dark-mode .produto p {
+    color: #ccc; /* Cor do texto da descrição dos produtos no tema dark */
+}
+
+body.dark-mode header {
+    background-color: #333; /* Cor de fundo do cabeçalho no tema dark */
+}
+
+body.dark-mode header h1 {
+  color: var(--dark-text); /* Cor do título do cabeçalho no tema dark */
+}
+
+body.dark-mode #sobre {
+    background-color: #333; /* Cor de fundo da seção "Sobre" no tema dark */
+}
+
+body.dark-mode #contato input,
+body.dark-mode #contato textarea {
+    background-color: #444; /* Cor de fundo dos inputs no tema dark */
+    color: var(--dark-text); /* Cor do texto dos inputs no tema dark */
+    border-color: #555; /* Cor da borda dos inputs no tema dark */
+}
+
+body.dark-mode #contato input:focus,
+body.dark-mode #contato textarea:focus {
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Sombra ao focar nos inputs no tema dark */
+}
+
+.container {
+    width: 85%; /* Aumenta um pouco para dar mais espaço */
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px; /* Limita a largura máxima em telas grandes */
+}
+
+/* Header */
+header {
+    background-color: var(--rosa-claro); /* Cor de fundo do cabeçalho */
+    color: var(--branco); /* Cor do texto do cabeçalho */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+    position: sticky; /* Fixa o cabeçalho no topo ao rolar */
+    top: 0;
+    z-index: 100; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em; /* Aumenta o tamanho da fonte */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    transition: color 0.3s ease; /* Transição suave na cor */
+}
+
+header h1:hover {
+    color: var(--dourado); /* Muda a cor ao passar o mouse */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+header nav li {
+    margin-left: 25px; /* Aumenta o espaçamento */
+}
+
+header nav a {
+    color: var(--branco); /* Cor dos links do cabeçalho */
+    text-decoration: none;
+    font-weight: 500; /* Semibold */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transição suave na cor e escala */
+    display: block; /* Facilita o clique em telas pequenas */
+    padding: 8px 12px; /* Adiciona um pequeno preenchimento */
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    color: var(--dourado); /* Muda a cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta um pouco ao passar o mouse */
+}
+
+/* Banner */
+#banner {
+    background-color: var(--verde-claro); /* Cor de fundo do banner */
+    color: var(--texto-principal); /* Cor do texto do banner */
+    text-align: center;
+    padding: 80px 0;
+    position: relative; /* Para posicionar elementos absolutamente dentro */
+    overflow: hidden; /* Esconde elementos que saem */
+}
+
+body.dark-mode #banner {
+    background-color: var(--dark-secondary); /* Cor de fundo do banner no tema dark */
+    color: var(--dark-text); /* Cor do texto do banner no tema dark */
+}
+
+#banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('banner-background.svg') repeat; /* Adiciona um padrão de fundo */
+    opacity: 0.1; /* Deixa o padrão bem sutil */
+    z-index: 0;
+}
+
+#banner .container {
+    position: relative; /* Coloca o conteúdo acima do ::before */
+    z-index: 1;
+}
+
+#banner h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra no texto */
+    animation: fadeInUp 1s ease forwards; /* Animação ao carregar */
+    opacity: 0;
+}
+
+#banner p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    animation: fadeInUp 1.3s ease forwards; /* Animação com um pequeno delay */
+    opacity: 0;
+}
+
+.cta-button {
+    background-color: var(--dourado); /* Cor de fundo do botão de chamada para ação */
+    color: var(--branco); /* Cor do texto do botão de chamada para ação */
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 600;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Sombra mais evidente */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 1.6s ease forwards; /* Animação com um delay maior */
+    opacity: 0;
+}
+
+.cta-button:hover {
+    background-color: #e0b100; /* Escurece um pouco ao passar o mouse */
+    transform: translateY(-3px); /* Leve elevação */
+}
+
+/* Produtos */
+#produtos {
+    padding: 70px 0;
+    background-color: var(--branco); /* Cor de fundo da seção de produtos */
+}
+
+body.dark-mode #produtos {
+  background-color: var(--dark-background); /* Cor de fundo da seção de produtos no tema dark */
+}
+
+#produtos h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: var(--texto-principal); /* Cor do título da seção de produtos */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+#produtos h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background-color: var(--dourado); /* Cor da linha abaixo do título da seção de produtos */
+}
+
+#produtos .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo com grid */
+    gap: 30px;
+}
+
+.produto {
+    background-color: var(--branco); /* Cor de fundo de cada produto */
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-5px); /* Eleva um pouco ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.produto h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: var(--texto-principal); /* Cor do título do produto */
+}
+
+body.dark-mode .produto h3 {
+  color: var(--dark-text); /* Cor do título do produto no tema dark */
+}
+
+.produto p {
+    font-size: 1em;
+    color: #777; /* Cor da descrição do produto */
+    margin-bottom: 15px;
+}
+
+.preco {
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--dourado); /* Cor do preço do produto */
+}
+
+.comprar-button {
+    background-color: var(--verde-claro); /* Cor de fundo do botão de comprar */
+    color: var(--branco); /* Cor do texto do botão de comprar */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.comprar-button:hover {
+    background-color: #77dd77; /* Escurece um pouco */
+}
+
+/* Sobre */
+#sobre {
+    background-color: var(--rosa-claro); /* Cor de fundo da seção "Sobre" */
+    color: var(--branco); /* Cor do texto da seção "Sobre" */
+    padding: 80px 0;
+    text-align: center;
+}
+
+body.dark-mode #sobre {
+    background-color: var(--dark-secondary); /* Cor de fundo da seção "Sobre" no tema dark */
+    color: var(--dark-text); /* Cor do texto da seção "Sobre" no tema dark */
+}
+
+#sobre h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.8em;
+    letter-spacing: 1px;
+}
+
+#sobre p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* Contato */
+#contato {
+    padding: 70px 0;
+    background-color: var(--branco); /* Cor de fundo da seção "Contato" */
+}
+
+body.dark-mode #contato {
+  background-color: var(--dark-background); /* Cor de fundo da seção "Contato" no tema dark */
+}
+
+#contato h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: var(--texto-principal); /* Cor do título da seção "Contato" */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+#contato h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background-color: var(--dourado); /* Cor da linha abaixo do título da seção "Contato" */
+}
+
+#contato form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#contato label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--texto-principal); /* Cor dos labels do formulário */
+}
+
+#contato input,
+#contato textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: inherit; /* Herda a fonte do body */
+    box-sizing: border-box; /* Garante que padding não afete a largura total */
+}
+
+#contato input:focus,
+#contato textarea:focus {
+    outline: none;
+    border-color: var(--dourado); /* Cor da borda ao focar nos inputs */
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.3); /* Sombra ao focar nos inputs */
+}
+
+#contato textarea {
+    resize: vertical; /* Permite redimensionamento vertical */
+    min-height: 150px;
+}
+
+#contato button {
+    background-color: var(--dourado); /* Cor de fundo do botão de enviar */
+    color: var(--branco); /* Cor do texto do botão de enviar */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contato button:hover {
+    background-color: #e0b100; /* Escurece um pouco ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #222; /* Cor de fundo do rodapé */
+    color: var(--branco); /* Cor do texto do rodapé */
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9em;
+}
+
+body.dark-mode footer {
+  background-color: #000; /* Cor de fundo do rodapé no tema dark */
+  color: var(--dark-text); /* Cor do texto do rodapé no tema dark */
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start; /* Alinha à esquerda em telas menores */
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        margin-top: 10px;
+        flex-direction: column; /* Empilha os itens de menu */
+        align-items: flex-start; /* Alinha à esquerda */
+    }
+
+    header nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #banner {
+        padding: 60px 0;
+    }
+
+    #banner h2 {
+        font-size: 2.2em;
+    }
+
+    #banner p {
+        font-size: 1em;
+    }
+
+    #produtos .container {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    }
+
+    .produto {
+        width: 100%;
+    }
+
+    #contato form {
+        width: 95%;
+    }
+
+    
+}
